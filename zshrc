@@ -1,3 +1,6 @@
+### Auto start ###
+pokemon-colorscripts -r
+
 ### Sources ###
 source ~/.local/share/zap/zap.zsh
 
@@ -18,7 +21,17 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-PS1='%F{green}% %~%f %# '
+PS1='%F{green}% %~%f ${vcs_info_msg_0_}%# '
+
+### Options ###
+setopt prompt_subst
+
+autoload -Uz vcs_info
+autoload -U colors && colors
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats "%{$fg[blue]%}(%{$fg[yellow]%}%{$fg[cyan]%} %b%{$fg[blue]%})%f"
+precmd() { vcs_info }
 
 ### Zap plugin manager ###
 plug "zsh-users/zsh-autosuggestions"
@@ -73,4 +86,3 @@ alias vim=nvim
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
-alias rmdir="rm -rI"

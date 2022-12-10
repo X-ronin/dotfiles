@@ -1,3 +1,6 @@
+### Auto start ###
+pokemon-colorscripts -r
+
 ### Exports and variables ###
 export EDITOR="nvim"
 export TERMINAL="st"
@@ -16,6 +19,9 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 PS1='\[\e[0;32m\]\w\[\e[0m\] \[\e[0;97m\]\$\[\e[0m\] '
+
+### Options ###
+set -o vi
 
 ### Archive extraction function ###
 ## Usage: ex <file> ##
