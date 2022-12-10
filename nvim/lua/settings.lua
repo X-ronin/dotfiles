@@ -1,13 +1,14 @@
--- Variables --
-local g = vim.g
+--- Variables ---
 local o = vim.o
 
--- Theme --
+--- Theme ---
 o.termguicolors = true
 --o.background = 'dark'
 
--- Better editor UI --
+--- Better editor UI ---
 o.number = true
 o.numberwidth = 4
---o.relativenumber = true
 o.cursorline = true
+
+--- Disable swapfile ---
+o.swapfile = false
