@@ -1,11 +1,11 @@
 require'nvim-treesitter.configs'.setup {	
 --- List parser names ---
-  ensure_installed = { "kotlin", "lua", "bash", "html", "css", "markdown", "markdown_inline", "r", "sql" },
+  ensure_installed = { "kotlin", "lua", "bash", "html", "css", "markdown", "markdown_inline", "r" },
 
 --- Options ---
   sync_install = false,
 --auto_install = true,
-ignore_install = { "javascript" },
+--ignore_install = { " " },
 
 -- Highlight
   highlight = {
