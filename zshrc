@@ -22,6 +22,9 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 PS1='%F{green}% %~%f ${vcs_info_msg_0_}%# '
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
 ### Options ###
 setopt prompt_subst
