@@ -1,10 +1,11 @@
 require'nvim-treesitter.configs'.setup {	
 --- List parser names ---
-  ensure_installed = { "kotlin", "lua", "bash", "html", "css", "markdown" },
+  ensure_installed = { "kotlin", "lua", "bash", "html", "css", "markdown", "markdown_inline", "r", "sql" },
 
 --- Options ---
   sync_install = false,
 --auto_install = true,
+ignore_install = { "javascript" },
 
 -- Highlight
   highlight = {
@@ -14,7 +15,7 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
---- Use bash highlight in zsh files ---
+--- Use bash highlight in zsh ---
 local ft_to_lang = require('nvim-treesitter.parsers').ft_to_lang
 require('nvim-treesitter.parsers').ft_to_lang = function(ft)
     if ft == 'zsh' then
