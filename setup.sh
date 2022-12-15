@@ -4,10 +4,10 @@
 sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
 
 ### Slowly neovim plugin manager ###
-wget -O slowly.zip $(curl -s https://api.github.com/repos/nat-418/slowly.nvim/releases/latest | grep "zipball" | cut -d\" -f4 | grep "https")
-unzip slowly.zip
-cp nat-418-slowly.nvim-d4aaafc/lua/slowly.lua ./nvim/lua/
-rm -rf nat-418-slowly.nvim-d4aaafc/ slowly.zip
+wget -O slowly.tar.gz $(curl -s https://api.github.com/repos/nat-418/slowly.nvim/releases/latest | grep "tarball" | cut -d\" -f4 | grep "https")
+tar -xvf slowly.tar.gz
+cp -i nat-418-slowly.nvim-d4aaafc/lua/slowly.lua ./nvim/lua/
+rm -rf nat-418-slowly.nvim-d4aaafc slowly.tar.gz
 
 ### Update symlinks ###
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
