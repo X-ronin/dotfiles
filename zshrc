@@ -85,6 +85,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias vim=nvim
+alias fetch="clear && ufetch"
+
+alias xr="sudo xbps-remove"
+alias xq="xbps-query -Rs"
+alias xo="sudo xbps-remove -o"
+alias xl="sudo xbps-install"
+alias xu="sudo xbps-install -Su"
 
 alias cp="cp -i"
 alias mv="mv -i"
