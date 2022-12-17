@@ -4,6 +4,7 @@ pokemon-colorscripts -r
 ### Exports and variables ###
 export EDITOR="nvim"
 export TERMINAL="st"
+export BROWSER="elinks"
 export MANPAGER="less"
 export PAGER="less"
 export LESSHISTFILE="-"

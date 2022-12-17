@@ -7,6 +7,7 @@ source ~/.local/share/zap/zap.zsh
 ### Exports and variables ###
 export EDITOR="nvim"
 export TERMINAL="st"
+export BROWSER="elinks"
 export MANPAGER="less"
 export PAGER="less"
 export LESSHISTFILE="-"
@@ -22,6 +23,7 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 PS1='%F{green}% %~%f ${vcs_info_msg_0_}%# '
+PATH="$HOME/.local/bin":$PATH
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -96,3 +98,4 @@ alias xu="sudo xbps-install -Su"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"

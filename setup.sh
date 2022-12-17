@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+### Remove motd files ###
+rm -rf $PREFIX/etc/motd*
+
 ### Zap zsh plugin manager ###
 sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
 
@@ -26,6 +29,8 @@ mkdir ~/.config/
 
 update_symlink termux/termux.properties ~/.termux/termux.properties
 update_symlink termux/colors.properties ~/.termux/colors.properties
+update_symlink scripts/compiler ~/.local/bin/compiler
+update_symlink scripts/opout ~/.local/bin/opout
 update_symlink nvim ~/.config/
 update_symlink awesome ~/.config/
 update_symlink bashrc ~/.bashrc
